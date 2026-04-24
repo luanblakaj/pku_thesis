@@ -1,0 +1,19 @@
+# Keep top-level structure but ignore all files inside these folders
+/data/*
+!/data/.gitkeep
+/docs/*
+!/docs/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rapp.history
+
+# System files
+.DS_Store
+Thumbs.db
+*~
