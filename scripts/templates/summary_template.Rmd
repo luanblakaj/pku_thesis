@@ -1,0 +1,116 @@
+---
+title: "Securitizing the Republic: Figure Summary"
+author: "Luan Blakaj 齐凯"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+    latex_engine: xelatex
+header-includes:
+  - \usepackage{float}
+  - \usepackage{graphicx}
+  - \usepackage{geometry}
+  - \geometry{margin=1in}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.pos = "H", out.width = "90%")
+```
+
+# Introduction
+
+This document provides a comprehensive summary of all figures generated for the thesis "Securitizing the Republic". It aggregates outputs from multiple analysis scripts, providing the methodology and interpretation for each visualization.
+
+The figures are organized by their analytical focus:
+1.  **Core Trends (A-D Series)**: Foundational continuity and displacement analysis.
+2.  **Expanded Methodologies (New-A Series)**: Advanced statistical tests (volatility, structural breaks).
+3.  **Additional Explorations (E-I Series)**: Recent data updates and robustness checks (E-Series was renamed to start at E to avoid conflicts).
+4.  **Spatial Trajectories**: Animated and static center-of-gravity analyses.
+
+\newpage
+
+# Section 1: Core Trends (Source 07)
+
+These figures establish the baseline arguments for continuity and spatial displacement.
+
+```{r source-07, results='asis'}
+# Iterates through the 'figures_07' list passed from the parent script
+if (exists("figures_07")) {
+    for (fig in figures_07) {
+        cat(paste0("## ", fig$id, ": ", fig$title, "\n\n"))
+
+        if (file.exists(fig$path)) {
+            cat(paste0("![](", fig$path, ")\n\n"))
+        } else {
+            cat("**Image not found.**\n\n")
+        }
+
+        cat(paste0("**Explanation**: ", fig$explanation, "\n\n"))
+        cat("\\newpage\n\n")
+    }
+}
+```
+
+# Section 2: Advanced Verification (Source 08)
+
+These figures use advanced statistical techniques (rolling volatility, STL decomposition) to verify the "continuity" hypothesis.
+
+```{r source-08, results='asis'}
+if (exists("figures_08")) {
+    for (fig in figures_08) {
+        cat(paste0("## ", fig$id, ": ", fig$title, "\n\n"))
+
+        if (file.exists(fig$path)) {
+            cat(paste0("![](", fig$path, ")\n\n"))
+        } else {
+            cat("**Image not found.**\n\n")
+        }
+
+        cat(paste0("**Explanation**: ", fig$explanation, "\n\n"))
+        cat("\\newpage\n\n")
+    }
+}
+```
+
+# Section 3: Expanded Analysis (Source 09)
+
+These figures cover the 2010-2025 period with updated data and include specific checks for seasonality and category breakdowns. Note: Figure IDs start from E to avoid overlap.
+
+```{r source-09, results='asis'}
+if (exists("figures_09")) {
+    for (fig in figures_09) {
+        cat(paste0("## ", fig$id, ": ", fig$title, "\n\n"))
+
+        if (file.exists(fig$path)) {
+            cat(paste0("![](", fig$path, ")\n\n"))
+        } else {
+            cat("**Image not found.**\n\n")
+        }
+
+        cat(paste0("**Explanation**: ", fig$explanation, "\n\n"))
+        cat("\\newpage\n\n")
+    }
+}
+```
+
+# Section 4: Spatial Trajectories (Source 10)
+
+Analysis of the "Center of Gravity" for political violence incidents.
+
+```{r source-10, results='asis'}
+if (exists("figures_10")) {
+    for (fig in figures_10) {
+        cat(paste0("## ", fig$id, ": ", fig$title, "\n\n"))
+
+        if (file.exists(fig$path)) {
+            cat(paste0("![](", fig$path, ")\n\n"))
+        } else {
+            cat("**Image not found.**\n\n")
+        }
+
+        cat(paste0("**Explanation**: ", fig$explanation, "\n\n"))
+        cat("\\newpage\n\n")
+    }
+}
+```
