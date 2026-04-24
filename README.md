@@ -16,3 +16,4 @@ How to use
 Notes
 - No data, docs, or outputs are stored in this repository.
 - Keep your data files local and do not commit them.
+- On request the data and output files can be shared. 
